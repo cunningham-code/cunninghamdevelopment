@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%; overflow: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#003251" />
+    <meta name="msapplication-TileColor" content="#003251" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>John Cunningham</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Poppins|Raleway"
+      rel="stylesheet"
+    />
+    <meta
+      property="og:title"
+      content="John Cunningham | Cunningham Development Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="I engage in creative disruption in business, technology and design. I develop everything from websites + mobile apps to marketing + sales strategies."
+    />
+    <meta
+      name="description"
+      content="I engage in creative disruption in business, technology and design. I develop everything from websites + mobile apps to marketing + sales strategies."
+    />
+    <meta
+      property="og:image"
+      content="https://www.johncunningham.co/background/social.png"
+    />
+    <meta name="twitter:site" content="cunningham_code" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+    <script src="https://use.fontawesome.com/887f11382d.js"></script>
+    <script>
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_org"] = "7Z22N";
+      window["_fs_namespace"] = "FS";
+      (function (m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function (a, b, s) {
+          g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.src = "https://" + _fs_host + "/s/fs.js";
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function (i, v, s) {
+          g(l, { uid: i }, s);
+          if (v) g(l, v, s);
+        };
+        g.setUserVars = function (v, s) {
+          g(l, v, s);
+        };
+        g.event = function (i, v, s) {
+          g("event", { n: i, p: v }, s);
+        };
+        g.shutdown = function () {
+          g("rec", !1);
+        };
+        g.restart = function () {
+          g("rec", !0);
+        };
+        g.consent = function (a) {
+          g("consent", !arguments.length || a);
+        };
+        g.identifyAccount = function (i, v) {
+          o = "account";
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function () {};
+      })(window, document, window["_fs_namespace"], "script", "user");
+    </script>
+    <script src="js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta
+      name="google-signin-client_id"
+      content="752735647878-1aui8tur0ljmh0dp77t9lnbe8mvp858q.apps.googleusercontent.com"
+    />
+  </head>
+
+  <body style="height: 100%; overflow: auto">
+    <section id="screen-top">
+      <div class="content" style="max-width: 875px; padding: 25px">
+        <img alt="John Cunningham Logo" class="top-logo" src="logo.svg" />
+        <h1 id="top-name">Creative Disruption</h1>
+        <p id="top-headline">In business, technology and design.</p>
+        <a id="top-button">Learn More About Me</a>
+      </div>
+      <div id="top-skip">
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <p>SKIP</p>
+      </div>
+    </section>
+
+    <div id="main" style="display: flex; height: 100%">
+      <div class="main-content" style="overflow-y: scroll">
+        <section
+          class="section top-section"
+          id="screen1"
+          style="background-color: #003251; color: #fff"
+        >
+          <div class="content" style="max-width: 875px; padding: 25px">
+            <img
+              alt="John Cunningham Logo"
+              style="
+                width: 35%;
+                height: auto;
+                max-height: 100px;
+                max-width: 100px;
+              "
+              src="logo.svg"
+            />
+            <h1 id="main-text" class="header center-align top">
+              <b>I'm John Cunningham</b>
+            </h1>
+            <a id="main-resume" onclick="window.open('resume.html');"
+              >See My Resume</a
+            >
+          </div>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#venture">Venture</a></li>
+            <li><a href="#industry">Industry</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div id="main-dynamic">
+          <section :id="sec.id" class="dynamic-blocks" v-for="sec in sections">
+            <div class="main-block-left" :style="sec.img"></div>
+            <div class="main-block-right">
+              <div>
+                <h1 class="main-block-title">{{sec.headline}}</h1>
+                <p>{{sec.description}}</p>
+                <div class="all-links">
+                  <div v-for="link in sec.links">
+                    <a :href="link.link" target="_blank" rel="noopener"
+                      >{{ link.title }}</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section
+          class="section"
+          id="google"
+          style="background-color: #0f0f0f; color: #fff"
+        >
+          <div
+            class="content"
+            style="
+              max-width: 100%;
+              width: 750px;
+              padding: 50px;
+              font-size: 1.45rem;
+              line-height: 2rem;
+              text-align: start;
+            "
+          >
+            <h1 style="font-weight: 700; margin-bottom: 30px; line-height: 1.4">
+              Could you get in touch with me if you needed to?
+            </h1>
+            <h3>Here - let me handle the introduction.</h3>
+            <p style="margin-bottom: 20px">
+              I'll email you my contact info, and if you need anything else from
+              me, you'll have my email.
+            </p>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          </div>
+        </section>
+        <section
+          class="section"
+          id="contact"
+          style="background-color: #eff2f4; color: #000"
+        >
+          <div
+            class="content"
+            style="
+              max-width: 100%;
+              width: 750px;
+              padding: 50px;
+              font-size: 1.45rem;
+              line-height: 2rem;
+            "
+          >
+            <h1 style="font-weight: 700; margin-bottom: 30px">Contact Me</h1>
+            <div id="social-pills-co">
+              <div class="social-pills" v-for="link in sociallinks">
+                <a
+                  :href="link.link"
+                  target="_blank"
+                  rel="noopener"
+                  style="color: #fff"
+                  >{{ link.title }}</a
+                >
+              </div>
+            </div>
+            <div
+              style="
+                margin: 20px;
+                font-size: 0.8rem;
+                color: #0f0f0f;
+                line-height: 1.5;
+              "
+            >
+              <p>Designed and built by John Cunningham</p>
+              <p>The code for this website is available on GitHub</p>
+              <p>© Copyright John Cunningham 2020</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+      var signedIn = false;
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+        signedIn = true;
+        $("#google").hide();
+
+        googleObject = {
+          name: profile.getName(),
+          email: profile.getEmail(),
+          time: Date.now(),
+        };
+
+        url =
+          "https://script.google.com/macros/s/AKfycbxBAmK3vCC9YxhCwni55__fD_fzMnpBX-3Jo1gPGhvx_XIKArxo/exec";
+
+        var jqxhr = $.ajax({
+          url: url,
+          method: "GET",
+          dataType: "json",
+          data: googleObject,
+          success: function (data) {
+            console.log(JSON.stringify(googleObject));
+            successmessage = "Data was succesfully captured";
+            console.log(successmessage);
+            console.log(data);
+          },
+          error: function (data) {
+            successmessage = "Error";
+            console.log(successmessage);
+            console.log(data);
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

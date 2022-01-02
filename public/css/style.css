@@ -1,0 +1,325 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inline-b {
+  display: inline-block;
+}
+
+body {
+  color: #fff;
+  font-family: "open-sans-bold", AvenirNext-Medium, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background: #fff;
+}
+
+nav li {
+  display: inline-block;
+  padding: 24px 10px;
+}
+
+nav li a {
+  color: #757575;
+  text-transform: uppercase;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section.top-section {
+  min-height: calc(100vh - 70px);
+}
+
+.main-block-left {
+  flex: 2;
+  background-color: #eff2f4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.main-block-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-width: 300px;
+}
+
+.main-block-right > div {
+  padding: 25px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.dynamic-blocks {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.dynamic-blocks:nth-child(odd) {
+  background-color: #003251;
+  color: #fff;
+  flex-direction: row;
+}
+
+#social-pills-co {
+  background: #0032515f;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 12px;
+  border-radius: 10px;
+}
+
+.social-pills {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+  margin: 5px;
+}
+
+.social-pills:nth-child(1) {
+  background: #003251;
+}
+
+.dynamic-blocks:nth-child(even) {
+  background-color: #fff;
+  color: #003251;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.all-links {
+  display: flex;
+  padding: 5px;
+  margin: 10px 0px;
+  flex-wrap: wrap;
+}
+
+.all-links div {
+  padding: 10px 20px;
+}
+
+.all-links div a {
+  text-decoration: underline;
+}
+
+.dynamic-blocks:nth-child(odd) .all-links div {
+  border-left: 3px solid #fff;
+}
+
+.dynamic-blocks:nth-child(even) .all-links div {
+  border-left: 3px solid #003251;
+}
+
+.dynamic-blocks:nth-child(odd) .all-links div a {
+  color: #fff;
+}
+
+.dynamic-blocks:nth-child(even) .all-links div a {
+  color: #003251;
+}
+
+.main-block-button {
+  padding: 10px 30px;
+  margin: 20px 0px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  font-size: calc(12px + 1.5vmin);
+  display: inline-block;
+}
+
+.dynamic-blocks:nth-child(odd) .main-block-button {
+  color: #fff;
+  border: solid 3px #fff;
+}
+
+.dynamic-blocks:nth-child(even) .main-block-button {
+  color: #003251;
+  border: solid 3px #003251;
+}
+
+.main-block-title {
+  margin: 20px 0px;
+}
+
+@media only screen and (max-width: 520px) {
+  nav li {
+    padding: 24px 4px;
+  }
+
+  nav li a {
+    font-size: 14px;
+  }
+}
+
+.main-chat {
+  width: 0px;
+  display: block;
+  -webkit-transition: width 3s ease, height 3s ease;
+  -moz-transition: width 3s ease, height 3s ease;
+  -o-transition: width 3s ease, height 3s ease;
+  transition: width 3s ease, height 3s ease;
+}
+
+.main-chat-active {
+  width: 0px;
+  display: block;
+  -webkit-transition: width 3s ease, height 3s ease;
+  -moz-transition: width 3s ease, height 3s ease;
+  -o-transition: width 3s ease, height 3s ease;
+  transition: width 3s ease, height 3s ease;
+}
+
+@media only screen and (min-width: 850px) {
+  .main-chat-active {
+    width: 270px;
+    display: block;
+    -webkit-transition: width 3s ease, height 3s ease;
+    -moz-transition: width 3s ease, height 3s ease;
+    -o-transition: width 3s ease, height 3s ease;
+    transition: width 3s ease, height 3s ease;
+  }
+}
+
+#resumne-contact {
+  display: flex;
+}
+
+@media only screen and (max-width: 1155px) {
+  #resumne-contact {
+    display: none;
+  }
+}
+
+.main-content {
+  width: 100%;
+  -webkit-transition: width 3s ease, height 3s ease;
+  -moz-transition: width 3s ease, height 3s ease;
+  -o-transition: width 3s ease, height 3s ease;
+  transition: width 3s ease, height 3s ease;
+}
+
+.main-content-active {
+  width: calc(100% - 270px);
+  width: 100%;
+  -webkit-transition: width 3s ease, height 3s ease;
+  -moz-transition: width 3s ease, height 3s ease;
+  -o-transition: width 3s ease, height 3s ease;
+  transition: width 3s ease, height 3s ease;
+}
+
+@media only screen and (min-width: 850px) {
+  .main-content-active {
+    width: calc(100% - 270px);
+    -webkit-transition: width 3s ease, height 3s ease;
+    -moz-transition: width 3s ease, height 3s ease;
+    -o-transition: width 3s ease, height 3s ease;
+    transition: width 3s ease, height 3s ease;
+  }
+}
+
+/* TOP */
+#top-headline {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5rem;
+  font-variant: small-caps;
+  font-size: 5.5vmin;
+  margin: 5vmin 0px;
+  display: block;
+}
+
+#top-name {
+  font-family: "Major Mono Display", monospace;
+  font-size: 10vmin;
+  padding: 15px;
+  display: block;
+}
+
+#top-button {
+  color: #fff;
+  padding: 10px 30px;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
+  border: solid 3px #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+.top-logo {
+  width: 35%;
+  height: auto;
+  max-height: 100px;
+  max-width: 100px;
+  display: none;
+}
+
+#top-skip {
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#screen-top {
+  background-color: #0f0f0f;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#top-skip i {
+  font-size: 30px;
+  margin: 0 20px;
+  color: #fff;
+}
+
+#top-skip p {
+  font-family: "Major Mono Display", monospace;
+}
+
+#main-text {
+  font-size: calc(1.7rem + 4vmin);
+  line-height: calc(2rem + 5vmin);
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+#main-resume {
+  color: #fff;
+  padding: 10px 30px;
+  margin: 20px 0px;
+  font-family: "Raleway", sans-serif;
+  border: solid 3px #fff;
+  border-radius: 10px;
+  font-size: calc(12px + 1.5vmin);
+  display: inline-block;
+  cursor: pointer;
+}
