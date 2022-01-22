@@ -1,154 +1,55 @@
 <template>
   <div class="home">
-    <div class="header">
-      <img
-        alt="John Cunningham Header"
-                src="/header/4.png"
-              />
+    <div id=header>
+      <div class="image-mobile">
+          <img alt="Image of John Cunningham" src="/background/skills.jpg" />
+      </div>
+      <div class="header fadeIn header-fadeIn">
+        <img alt="John Cunningham Header" src="/header/0.png" />
+      </div>
     </div>
     <div class="main">
       <div class="image">
-        <img
-        alt="Image of John Cunningham"
-                src="/background/skills.jpg"
-              />
+        <img alt="Image of John Cunningham" src="/background/skills.jpg" />
       </div>
       <div class="pages" style="text-align: left">
-        <div class="page">
-          <h2>I have experience in...</h2>
-           <div class="pills">
-              <p v-for="skill in skills" :key="skill">{{ skill }}</p>
+        <router-link to="/experience">
+          <div class="page fadeIn skills">
+            <h2>I have experience in...</h2>
+            <div class="pills">
+                <p v-for="skill in skills" :key="skill">{{ skill }}</p>
+            </div>
           </div>
-        </div>
-        <div class="page">
-          <h2>I'm exploring opportunities in...</h2>
-         <div class="pills">
+        </router-link>
+        <router-link to="/growth">
+          <div class="page fadeIn opportunities">
+            <h2>I'm learning about...</h2>
+            <div class="pills">
               <p v-for="op in opportunities" :key="op">{{ op }}</p>
+            </div>
           </div>
-        </div>
-        <div class="page">
-          <h2>I'm currently working at...</h2>
-          <div class="pills">
-            <p>{{ currentWork }}</p>
+        </router-link>
+        <router-link to="/work">
+          <div class="page fadeIn work">
+            <h2>I'm working at...</h2>
+            <div class="pills">
+              <p>{{ currentWork }}</p>
+            </div>
           </div>
-        </div>
-        <!--
-        <div class="page">
-          
-        </div>
-        -->
+        </router-link>
       </div>
     </div>
     <div class="footer">
       <h1>Let's Talk</h1>
-      <p>contact@johnacunningham.com</p>
+      <a href="mailto:contact@johnacunningham.com">contact@johnacunningham.com</a>
       <div class="icons">
-        <i class="bi bi-twitter"></i>
-        <i class="bi bi-github"></i>
-        <i class="bi bi-linkedin"></i>
+        <a href="https://twitter.com/cunningham_code" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+        <a href="https://github.com/cunningham-code" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/cunningham1212/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
       </div>
+      <p>My pronouns are he/him/his.</p>
     </div>
   </div>
-  <!--
-    <div id="main" style="display: flex; height: 100%">
-      <div class="main-content" style="overflow-y: scroll">
-        <section
-          class="section top-section"
-          id="screen1"
-          style="background-color: #003251; color: #fff"
-        >
-          <div class="content" style="max-width: 875px; padding: 25px">
-            <img
-              alt="John Cunningham Logo"
-              style="
-                width: 35%;
-                height: auto;
-                max-height: 100px;
-                max-width: 100px;
-              "
-              src="logo.svg"
-            />
-            <h1 id="main-text" class="header center-align top">
-              <b>I'm John Cunningham</b>
-            </h1>
-            <a id="main-resume" onclick="window.open('resume.html');"
-              >See My Resume</a
-            >
-          </div>
-        </section>
-        <nav>
-          <ul>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#venture">Venture</a></li>
-            <li><a href="#industry">Industry</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div id="main-dynamic">
-          <section class="dynamic-blocks" v-for="sec in sections" :key="sec.id">
-            <div class="main-block-left" :style="sec.img"></div>
-            <div class="main-block-right">
-              <div>
-                <h1 class="main-block-title">{{sec.headline}}</h1>
-                <p>{{sec.description}}</p>
-                <div class="all-links">
-                  <div v-for="link in sec.links" :key="link.link">
-                    <a :href="link.link" target="_blank" rel="noopener"
-                      >{{ link.title }}</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <section
-          class="section"
-          id="contact"
-          style="background-color: #eff2f4; color: #000"
-        >
-          <div
-            class="content"
-            style="
-              max-width: 100%;
-              width: 750px;
-              padding: 50px;
-              font-size: 1.45rem;
-              line-height: 2rem;
-            "
-          >
-            <h1 style="font-weight: 700; margin-bottom: 30px">Contact Me</h1>
-            <div id="social-pills-co">
-              
-              <div class="social-pills" v-for="link in sociallinks" :key="link.url">
-                <a
-                  :href="link.link"
-                  target="_blank"
-                  rel="noopener"
-                  style="color: #fff"
-                  >{{ link.title }}</a
-                >
-              </div>
-              
-            </div>
-            <div
-              style="
-                margin: 20px;
-                font-size: 0.8rem;
-                color: #0f0f0f;
-                line-height: 1.5;
-              "
-            >
-              <p>Designed and built by John Cunningham</p>
-              <p>The code for this website is available on GitHub</p>
-              <p>© Copyright John Cunningham 2020</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  -->
 </template>
 
 <script>
@@ -167,18 +68,16 @@ export default {
     return {
       test: "Contact Me",
       skills: [
-        "Option 1",
-        "Option 2",
-        "Option 3",
-        "Option 4",
-        "Option 5"
+        "App Dev.",
+        "Web Dev.",
+        "Cloud",
+        "Desing Patterns",
+        "Startups"
       ],
       opportunities: [
-        "Option 1",
-        "Option 2",
-        "Option 3",
-        "Option 4",
-        "Option 5"
+        "Machine Learning",
+        "ESG Investing",
+        "DAOs"
       ],
       currentWork: "American Century Investments",
       contact: "Reach me by Twitter, email or text.",
@@ -282,7 +181,8 @@ export default {
 }
 
 .pages {
-  flex: 3
+  flex: 3;
+  max-width: 100%;
 }
 
 .image {
@@ -301,6 +201,44 @@ export default {
   box-shadow: 10px 10px #88A0A8; /*#0032518f;*/
 }
 
+.image-mobile {
+  display: none
+}
+
+@media only screen and (max-aspect-ratio:8/7) {
+  .image { display: none; }
+  
+  .image-mobile {
+    padding: 20px;
+    display: block;
+  }
+
+  .image-mobile img {
+    min-width: 300px;
+    width: 75%;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 10px 10px #88A0A8; /*#0032518f;*/
+  }
+
+  .main {
+    padding: 0px 0px 50px 0px !important;
+    flex: 1;
+  }
+
+  #header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header img {
+    padding: 20px;
+  }
+}
+
 .page {
   padding: 0px 20px;
   margin: 30px;
@@ -308,10 +246,76 @@ export default {
   border-left: 2px #88A0A8 dotted;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+         
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+         
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.skills {
+  animation-delay: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.opportunities {
+  animation-delay: 1s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.work {
+  animation-delay: 1.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.header-fadeIn {
+  animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.page:hover {
+  padding: 0px 20px;
+  margin: 30px;
+  position: relative;
+  border-left: 7px #88A0A8 solid;
+}
+
+.page:active {
+  padding: 0px 20px;
+  margin: 30px;
+  position: relative;
+  border-left: 14px #88A0A8 solid;
+}
+
+.page h2 {
+  color: #000000;
+}
+
 .pills {
     display: flex;
     margin-bottom: 20px;
     margin-top:10px;
+    flex-wrap: wrap;
 }
 
 .pills p {
@@ -331,20 +335,27 @@ export default {
 }
 
 .footer {
-  background-color: #003251;
+  background: rgb(0,74,121);
+  background: linear-gradient(180deg, rgba(0,74,121,1) 0%, rgba(0,28,46,1) 100%);
   color: #fff;
   width: 100%;
   padding: 50px;
 }
 
-.footer p {
+.footer a {
   font-size: 2rem;
-  padding: 5px;
+  margin: 20px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer .icons {
+  padding: 10px 0px;
 }
 
 .footer .icons i {
-  height: 2em;
-  width: 2em;
+  height: 4em;
+  width: 4em;
   padding: 1em 0.25em;
 }
 </style>
