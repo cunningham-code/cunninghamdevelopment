@@ -46,6 +46,8 @@
         <a href="https://twitter.com/cunningham_code" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
         <a href="https://github.com/cunningham-code" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/cunningham1212/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+        <a href="https://calendly.com/cunningham-code/15mincall" target="_blank" rel="noopener noreferrer"><i class="bi bi-calendar"></i></a>
+        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>     
       </div>
       <p>My pronouns are he/him/his.</p>
     </div>
@@ -343,20 +345,20 @@ export default {
 }
 
 .footer a {
-  font-size: 2rem;
-  margin: 20px;
+  font-size: 1.3rem;
+  margin: 10px;
   color: #fff;
   text-decoration: underline;
 }
 
 .footer .icons {
-  padding: 10px 0px;
+  padding: 5px 0px;
 }
 
 .footer .icons i {
   height: 4em;
   width: 4em;
-  padding: 1em 0.25em;
+  padding: 0.25em;
 }
 </style>
 
