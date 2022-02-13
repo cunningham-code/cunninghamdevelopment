@@ -40,16 +40,29 @@
       </div>
     </div>
     <div class="footer">
-      <h1>Let's Talk</h1>
-      <a href="mailto:contact@johnacunningham.com">contact@johnacunningham.com</a>
-      <div class="icons">
-        <a href="https://twitter.com/cunningham_code" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
-        <a href="https://github.com/cunningham-code" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/cunningham1212/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-        <a href="https://calendly.com/cunningham-code/15mincall" target="_blank" rel="noopener noreferrer"><i class="bi bi-calendar"></i></a>
-        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>     
+      <div class="footer-section">
+        <div class="footer-item">
+          <h1>Let's Talk</h1>
+          <a href="mailto:contact@johnacunningham.com">contact@johnacunningham.com</a>
+        </div>
+        <div class="footer-item">
+          <h1>Resume</h1>
+          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">See My Current Resume</a> 
+        </div>
+        <div class="footer-item">
+          <div class="icons">
+            <a href="https://twitter.com/cunningham_code" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+            <a href="https://github.com/cunningham-code" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/cunningham1212/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+            <a href="https://calendly.com/cunningham-code/15mincall" target="_blank" rel="noopener noreferrer"><i class="bi bi-calendar"></i></a>    
+          </div>
+        </div>
+        
       </div>
-      <p>My pronouns are he/him/his.</p>
+      <div class="copyright-text">
+        <p>My pronouns are he/him/his</p>
+        <p>John Cunningham © 2022</p>
+      </div>
     </div>
   </div>
 </template>
@@ -73,7 +86,7 @@ export default {
         "App Dev.",
         "Web Dev.",
         "Cloud",
-        "Desing Patterns",
+        "Design Patterns",
         "Startups"
       ],
       opportunities: [
@@ -154,7 +167,6 @@ export default {
 <style scoped>
 .home {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,6 +250,21 @@ export default {
 
   .header img {
     padding: 20px;
+  }
+
+  .footer-section {
+    flex-direction: column;
+  }
+
+  .footer-section > div:nth-of-type(3) { 
+    border-left: none !important;
+  }
+  .footer-item {
+    text-align: center !important;
+    padding-left: 0px !important;
+  }
+  .copyright-text {
+    flex-direction: column;
   }
 }
 
@@ -341,24 +368,56 @@ export default {
   background: linear-gradient(180deg, rgba(0,74,121,1) 0%, rgba(0,28,46,1) 100%);
   color: #fff;
   width: 100%;
-  padding: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.footer-section {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-item {
+  flex: 1;
+  text-align: left;
+  margin: 20px;
+  padding-left: 40px;
+  /*border-left: 2px solid #fff*/
+}
+
+.footer-section > div:nth-of-type(3) { 
+    border-left: 2px solid #fff;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+ }
 
 .footer a {
   font-size: 1.3rem;
-  margin: 10px;
   color: #fff;
   text-decoration: underline;
 }
 
 .footer .icons {
-  padding: 5px 0px;
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer .icons i {
-  height: 4em;
-  width: 4em;
-  padding: 0.25em;
+  padding: 1rem;
+  font-size: 2rem
+}
+
+.copyright-text {
+  display: flex;
+}
+.copyright-text p {
+  margin: 0px 10px;
 }
 </style>
 
@@ -374,7 +433,7 @@ html {
   height: 100%;
 }
 body {
-  overflow: auto;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }

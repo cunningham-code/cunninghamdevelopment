@@ -1,6 +1,8 @@
 <template>
   <div class="side-page">
-    <img class="header" alt="John Cunningham Header" src="/header/white-clear.png" />
+    <router-link to="/">
+      <img class="header" alt="John Cunningham Header" src="/header/white-clear.png" />
+    </router-link>
     <div class="card">
       <h1 class="margin-20">Work</h1>
       <p class="margin-20">I am currently employed by American Century Investments, where I work as a Software Engineer Specialist. While I started working for the firm as an intern in the Summer of 2020, I have worked for American Century Investments full-time since January 2021. In my role, I've used machine learning and cloud services to create products that help ACI put clients first.</p>
