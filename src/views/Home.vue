@@ -1,5 +1,5 @@
 <template>
-  <div class="home" style="background: #fff">
+  <div class="home">
     <div id=header>
       <div class="image-mobile">
           <img alt="Image of John Cunningham" src="/background/skills.jpg" />
@@ -421,13 +421,13 @@ export default {
   margin: 0px 10px;
 }
 
+.home {
+  background-color: #fff
+}
+
 </style>
 
 <style>
-#app {
-  max-height: 100% !important;
-  width: 100%;
-}
 
 html {
   overflow: hidden;
@@ -446,6 +446,6 @@ body {
 
 #app {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 </style>
