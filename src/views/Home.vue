@@ -54,7 +54,6 @@
             <a rel=" me" href="https://techhub.social/@cunningham_code" target="_blank"><i class="bi bi-mastodon"></i></a>
             <a href="https://github.com/cunningham-code" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
             <a href="https://www.linkedin.com/in/cunningham1212/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-            <a href="https://calendly.com/cunningham-code/15mincall" target="_blank" rel="noopener noreferrer"><i class="bi bi-calendar"></i></a>    
           </div>
         </div>
         
