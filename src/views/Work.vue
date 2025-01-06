@@ -14,6 +14,6 @@
         </div>
       </a>
     </div>
-    <a target="_blank" rel="noopener noreferrer" id="continue-link" href="https://calendly.com/cunningham-code/15mincall">Continue to Contact <i class="bi bi-arrow-right"></i></a>
+    <a target="_blank" rel="noopener noreferrer" id="continue-link" href="mailto:hello@johncunningham.co">Continue to Contact <i class="bi bi-arrow-right"></i></a>
   </div>
 </template>

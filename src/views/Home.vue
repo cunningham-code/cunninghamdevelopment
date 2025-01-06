@@ -43,7 +43,7 @@
       <div class="footer-section">
         <div class="footer-item">
           <h1>Let's Talk</h1>
-          <a href="mailto:contact@johnacunningham.com">contact@johnacunningham.com</a>
+          <a href="mailto:hello@johncunningham.co">hello@johncunningham.co</a>
         </div>
         <div class="footer-item">
           <h1>Resume</h1>
@@ -91,8 +91,7 @@ export default {
       ],
       opportunities: [
         "Machine Learning",
-        "ESG Investing",
-        "DAOs"
+        "ESG Investing"
       ],
       currentWork: "American Century Investments",
       contact: "Reach me by Twitter, email or text.",
@@ -122,14 +121,14 @@ export default {
             "Creating a startup requires constant iteration. The Flutter and Node.js codebases were never 'done'. Both apps I built, Preff and Niteful, taught me to keep trying new things.",
           links: [
             {
-              title: "See Preff Live",
-              link: "https://www.preff.menu",
-            },
-            {
               title: "Learn More About Niteful",
               link:
-                "https://play.google.com/store/apps/details?id=com.cunningham.niteful&hl=en_US",
+                "https://github.com/cunningham-code/niteful",
             },
+            {
+              title: "Learn About Preff",
+              link: "https://thebrownandwhite.com/2019/05/13/lehigh-students-create-preff-app-socializing-meals/",
+            }
           ],
         },
         {
@@ -143,7 +142,7 @@ export default {
       sociallinks: [
         {
           title: "Email",
-          url: "mailto:cunningjc10@gmail.com",
+          url: "mailto:hello@johncunningham.co",
         },
         {
           title: "LinkedIn",
